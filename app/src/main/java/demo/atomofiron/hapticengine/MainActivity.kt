@@ -2,7 +2,6 @@ package demo.atomofiron.hapticengine
 
 import android.graphics.Color
 import android.os.Bundle
-import android.view.HapticFeedbackConstants
 import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
@@ -28,37 +27,38 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.view.HapticFeedbackConstantsCompat
 import demo.atomofiron.hapticengine.ui.theme.HapticTheme
 
 val types = arrayOf(
-    "LONG_PRESS" to HapticFeedbackConstants.LONG_PRESS,
-    "VIRTUAL_KEY" to HapticFeedbackConstants.VIRTUAL_KEY,
-    "KEYBOARD_TAP" to HapticFeedbackConstants.KEYBOARD_TAP,
-    "CLOCK_TICK" to HapticFeedbackConstants.CLOCK_TICK,
+    "LONG_PRESS" to HapticFeedbackConstantsCompat.LONG_PRESS,
+    "VIRTUAL_KEY" to HapticFeedbackConstantsCompat.VIRTUAL_KEY,
+    "KEYBOARD_TAP" to HapticFeedbackConstantsCompat.KEYBOARD_TAP,
+    "CLOCK_TICK" to HapticFeedbackConstantsCompat.CLOCK_TICK,
     "CALENDAR_DATE (hidden)" to 5,
-    "CONTEXT_CLICK" to HapticFeedbackConstants.CONTEXT_CLICK,
-    "KEYBOARD_PRESS (27)" to HapticFeedbackConstants.KEYBOARD_PRESS,
-    "KEYBOARD_RELEASE (27)" to HapticFeedbackConstants.KEYBOARD_RELEASE,
-    "VIRTUAL_KEY_RELEASE (27)" to HapticFeedbackConstants.VIRTUAL_KEY_RELEASE,
-    "TEXT_HANDLE_MOVE (27)" to HapticFeedbackConstants.TEXT_HANDLE_MOVE,
+    "CONTEXT_CLICK" to HapticFeedbackConstantsCompat.CONTEXT_CLICK,
+    "KEYBOARD_PRESS (27)" to HapticFeedbackConstantsCompat.KEYBOARD_PRESS,
+    "KEYBOARD_RELEASE (27)" to HapticFeedbackConstantsCompat.KEYBOARD_RELEASE,
+    "VIRTUAL_KEY_RELEASE (27)" to HapticFeedbackConstantsCompat.VIRTUAL_KEY_RELEASE,
+    "TEXT_HANDLE_MOVE (27)" to HapticFeedbackConstantsCompat.TEXT_HANDLE_MOVE,
     "ENTRY_BUMP (hidden)" to 10,
     "DRAG_CROSSING (hidden)" to 11,
-    "GESTURE_START (30)" to HapticFeedbackConstants.GESTURE_START,
-    "GESTURE_END (30)" to HapticFeedbackConstants.GESTURE_END,
+    "GESTURE_START (30)" to HapticFeedbackConstantsCompat.GESTURE_START,
+    "GESTURE_END (30)" to HapticFeedbackConstantsCompat.GESTURE_END,
     "EDGE_SQUEEZE (hidden)" to 14,
     "EDGE_RELEASE (hidden)" to 15,
-    "CONFIRM (30)" to HapticFeedbackConstants.CONFIRM,
-    "REJECT (30)" to HapticFeedbackConstants.REJECT,
+    "CONFIRM (30)" to HapticFeedbackConstantsCompat.CONFIRM,
+    "REJECT (30)" to HapticFeedbackConstantsCompat.REJECT,
     "ROTARY_SCROLL_TICK (hidden)" to 18,
     "ROTARY_SCROLL_ITEM_FOCUS (hidden)" to 19,
     "ROTARY_SCROLL_LIMIT (hidden)" to 20,
-    "TOGGLE_ON (34)" to HapticFeedbackConstants.TOGGLE_ON,
-    "TOGGLE_OFF (34)" to HapticFeedbackConstants.TOGGLE_OFF,
-    "GESTURE_THRESHOLD_ACTIVATE (34)" to HapticFeedbackConstants.GESTURE_THRESHOLD_ACTIVATE,
-    "GESTURE_THRESHOLD_DEACTIVATE (34)" to HapticFeedbackConstants.GESTURE_THRESHOLD_DEACTIVATE,
-    "DRAG_START (34)" to HapticFeedbackConstants.DRAG_START,
-    "SEGMENT_TICK (34)" to HapticFeedbackConstants.SEGMENT_TICK,
-    "SEGMENT_FREQUENT_TICK (34)" to HapticFeedbackConstants.SEGMENT_FREQUENT_TICK,
+    "TOGGLE_ON (34)" to HapticFeedbackConstantsCompat.TOGGLE_ON,
+    "TOGGLE_OFF (34)" to HapticFeedbackConstantsCompat.TOGGLE_OFF,
+    "GESTURE_THRESHOLD_ACTIVATE (34)" to HapticFeedbackConstantsCompat.GESTURE_THRESHOLD_ACTIVATE,
+    "GESTURE_THRESHOLD_DEACTIVATE (34)" to HapticFeedbackConstantsCompat.GESTURE_THRESHOLD_DEACTIVATE,
+    "DRAG_START (34)" to HapticFeedbackConstantsCompat.DRAG_START,
+    "SEGMENT_TICK (34)" to HapticFeedbackConstantsCompat.SEGMENT_TICK,
+    "SEGMENT_FREQUENT_TICK (34)" to HapticFeedbackConstantsCompat.SEGMENT_FREQUENT_TICK,
 )
 
 // haptic max 55 - Nothing Phone(1)
