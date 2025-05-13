@@ -29,6 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.view.HapticFeedbackConstantsCompat
 import demo.atomofiron.hapticengine.ui.theme.HapticTheme
+import androidx.core.graphics.toColorInt
 
 val types = arrayOf(
     "LONG_PRESS" to HapticFeedbackConstantsCompat.LONG_PRESS,
@@ -74,7 +75,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         window.decorView.isHapticFeedbackEnabled = true
         window.decorView.post {
-            val one = Color.parseColor("#01808080")
+            val one = "#01808080".toColorInt()
             enableEdgeToEdge(navigationBarStyle = SystemBarStyle.auto(one, one))
             window.navigationBarColor = one
         }
